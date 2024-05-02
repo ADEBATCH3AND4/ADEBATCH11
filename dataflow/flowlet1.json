@@ -10,6 +10,9 @@
 					"name": "filter1"
 				},
 				{
+					"name": "select1"
+				},
+				{
 					"name": "input1"
 				},
 				{
@@ -18,11 +21,20 @@
 			],
 			"scriptLines": [
 				"input(output(",
-				"          Salary as integer",
+				"          emp_id as string,",
+				"          Name as string,",
+				"          Salary as integer,",
+				"          department_name as string,",
+				"          country_id as string",
 				"     ),",
 				"     order: 0,",
 				"     allowSchemaDrift: true) ~> input1",
-				"input1 filter(Salary > 15000) ~> filter1",
+				"select1 filter(Salary > 15000) ~> filter1",
+				"input1 select(mapColumn(",
+				"          Salary",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
 				"filter1 output() ~> output1"
 			]
 		}
