@@ -1,0 +1,9 @@
+{
+	"name": "DF-ADEAPR24",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f9b04fd1-ec6e-41bf-ae22-4668b0dd7fd6",
+		"tenantId": "81bce5a7-e26a-4541-bad2-66e1c0b72f2d"
+	}
+}
