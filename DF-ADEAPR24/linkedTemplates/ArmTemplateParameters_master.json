@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DF-ADEAPR24"
+		},
+		"LS_BLOB_connectionString": {
+			"value": ""
+		},
+		"LS_BLOB_KV_connectionString": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=stgadlsapr24;"
+		},
+		"LS_SQL_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_KV_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sqlserverade24.database.windows.net;Initial Catalog=db_adeapr24;User ID=anand"
+		},
+		"LS_KV_properties_typeProperties_baseUrl": {
+			"value": "https://kv-adeapr242.vault.azure.net/"
+		},
+		"EVENT TRIGGER_properties_typeProperties_scope": {
+			"value": "/subscriptions/7bfa60cc-5197-4f0b-9c9a-072399dceb47/resourceGroups/RG-ADEAPR24/providers/Microsoft.Storage/storageAccounts/stgadlsapr24"
+		},
+		"TUMBLING TRIGGER_properties_pipeline_parameters_StartDate": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"TUMBLING TRIGGER_properties_pipeline_parameters_EndDate": {
+			"value": "@trigger().outputs.windowEndTime"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
