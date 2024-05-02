@@ -31,6 +31,8 @@
 				"     allowSchemaDrift: true) ~> input1",
 				"select1 filter(Salary > 15000) ~> filter1",
 				"input1 select(mapColumn(",
+				"          emp_id,",
+				"          Name,",
 				"          Salary",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
